@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Form, Input, Icon, Button, Checkbox, Layout} from 'antd';
+import { Form, Input, Icon, Button, Checkbox, Layout } from 'antd';
 import '../../../css/Login.css';
 class LoginForm extends Component {
     handleSubmit = e => {
@@ -46,11 +46,10 @@ class LoginForm extends Component {
                         })(<Checkbox>Remember me</Checkbox>)}
                         <a className="login-form-forgot" href="">
                             Forgot password
-                  </a>
+                        </a>
                         <Button type="primary" htmlType="submit" className="login-form-button">
                             Log in
-                  </Button>
-                        Or <a href="">register now!</a>
+                        </Button>
                     </Form.Item>
                 </Form>
             </Layout>

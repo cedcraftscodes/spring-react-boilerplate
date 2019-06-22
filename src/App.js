@@ -6,9 +6,8 @@ import About from './components/pages/About';
 import Contact from './components/pages/Contact';
 import Login from './components/pages/Login';
 
-import { Layout, Menu, Breadcrumb, Icon } from 'antd';
-const { SubMenu } = Menu;
-const { Header, Footer, Content, Sider } = Layout;
+import { Layout, Menu } from 'antd';
+const { Header, Footer } = Layout;
 class App extends Component {
      render() {
           return (
@@ -33,7 +32,7 @@ class App extends Component {
                               <Route exact path='/' component={Home} />
                               <Route path='/contact' component={Contact} />
                               <Route path='/about' component={About} />
-                              <Route path='/Login' component={Login} />
+                              <Route path='/login' component={Login} />
                          </Switch>
                          <Footer>
                               Footer
