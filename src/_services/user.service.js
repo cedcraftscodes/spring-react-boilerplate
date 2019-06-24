@@ -14,7 +14,8 @@ function login(username, password) {
     const requestOptions = {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
-        body: JSON.stringify({username, password})
+        body: JSON.stringify({username, password}),
+        mode:"cors"
     };
     return fetch(`http://localhost:8080/api/auth/signin`, requestOptions)
     .then(handleResponse)
