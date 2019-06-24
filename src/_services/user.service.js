@@ -17,7 +17,7 @@ function login(username, password) {
         body: JSON.stringify({username, password}),
         mode:"cors"
     };
-    return fetch(`http://test-spring-git.herokuapp.com/api/auth/signin`, requestOptions)
+    return fetch(`https://test-spring-git.herokuapp.com/api/auth/signin`, requestOptions)
     .then(handleResponse)
     .then(user => {
         localStorage.setItem('user', JSON.stringify(user));
@@ -35,7 +35,7 @@ function getAll() {
         headers: authHeader()
     };
 
-    return fetch(`http://test-spring-git.herokuapp.com/users`, requestOptions).then(handleResponse);
+    return fetch(`https://test-spring-git.herokuapp.com/users`, requestOptions).then(handleResponse);
 }
 
 
@@ -55,7 +55,7 @@ function register(user) {
         body: JSON.stringify(user)
     };
 
-    return fetch(`http://test-spring-git.herokuapp.com/users/register`, requestOptions).then(handleResponse);
+    return fetch(`https://test-spring-git.herokuapp.com/users/register`, requestOptions).then(handleResponse);
 }
 
 function update(user) {
@@ -65,7 +65,7 @@ function update(user) {
         body: JSON.stringify(user)
     };
 
-    return fetch(`http://test-spring-git.herokuapp.com/users/${user.id}`, requestOptions).then(handleResponse);;
+    return fetch(`https://test-spring-git.herokuapp.com/users/${user.id}`, requestOptions).then(handleResponse);;
 }
 
 function _delete(id) {
@@ -74,7 +74,7 @@ function _delete(id) {
         headers: authHeader()
     };
 
-    return fetch(`http://test-spring-git.herokuapp.com/users/${id}`, requestOptions).then(handleResponse);
+    return fetch(`https://test-spring-git.herokuapp.com/users/${id}`, requestOptions).then(handleResponse);
 }
 
 function handleResponse(response) {
